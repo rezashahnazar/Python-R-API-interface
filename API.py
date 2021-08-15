@@ -24,7 +24,7 @@ def Home():
             sexStat = 'woman'
         msg = f"In a {age} year old {sexStat} with {wt} Kgs wieght, creatinin level of {cr} produces GFR estimation of:"
     
-        apiUrl= 'http://127.0.0.1:6600/gfr'
+        apiUrl= 'http://127.0.0.1:7767/gfr'
         body= {
             'age' : age,
             'sex' : sex,
@@ -33,5 +33,5 @@ def Home():
         }
         response = requests.post(apiUrl, data=body).json()
         resp= response[0]
-        image = f'http://127.0.0.1:6600/plt?age={age}&sex={sex}&wt={wt}&cr={cr}'
+        image = f'http://127.0.0.1:7767/plt?age={age}&sex={sex}&wt={wt}&cr={cr}'
     return render_template('gfr-tmp.html', message=msg, response=resp, image=image)
