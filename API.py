@@ -32,4 +32,4 @@ def Home():
         response = requests.post(apiUrl, data=body).json()
         resp = round(response[0], 1)
         image = f"{url}plt?age={age}&sex={sex}&wt={wt}&cr={cr}"
-    return render_template("gfr-tmp.html", message=msg, response=resp, image=image)
+    return render_template("interface.html", message=msg, response=resp, image=image)
