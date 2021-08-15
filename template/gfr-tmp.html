@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFR Calculator</title>
+</head>
+<body>
+    <div class="container mt-5 mb-5 bg-light">
+        <div class='fixed-center p-3'>
+            <h1 class="text-center text-primary font-weight-bold">GFR Calculator!</h1>
+        </div>
+        <form action="" method="POST">
+            <input class="form-control mb-2" type="text" placeholder="Age" name="age">
+            <input class="form-control mb-2" type="text" placeholder="Sex" name="sex">
+            <input class="form-control mb-2" type="text" placeholder="Weight" name="wt">
+            <input class="form-control mb-2" type="text" placeholder="Cr." name='cr'>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class='card text-white bg-danger mt-5 p-3'>
+            {% if message %}
+            <h5 class='text-center'>{{message}}</h5>
+            {% endif %}
+            <br>
+            {% if response %}
+            <h3 class='text-center font-weight-bold'>{{response}}</h3>
+            {% endif %}
+            <br>
+            {%if image %}
+            <img src="{{image}}">
+            {%endif%}
+            
+        </div>
+    </div>
+    
+</body>
+</html>
