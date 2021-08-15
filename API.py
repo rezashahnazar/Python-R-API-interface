@@ -18,9 +18,9 @@ def Home():
         wt = request.form.get("wt")
         cr = request.form.get("cr")
         sexStat = ""
-        if sex == "f":
+        if sex == "m":
             sexStat = "man"
-        elif sex == "m":
+        elif sex == "f":
             sexStat = "woman"
         msg = f"In a {age} year old {sexStat} with {wt} Kgs wieght, creatinin level of {cr} makes a GFR estimation of:"
 
